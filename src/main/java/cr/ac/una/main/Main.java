@@ -6,6 +6,10 @@ https://github.com/man125/mvcbase.git
  */
 package cr.ac.una.main;
 
+import cr.ac.una.controller.Controller;
+import cr.ac.una.model.Model;
+import cr.ac.una.view.View;
+
 /**
  *
  * @author manuel
@@ -13,6 +17,9 @@ package cr.ac.una.main;
 public class Main {
     
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+       Model m = new Model();
+       View v = new View();
+       Controller c= new Controller(m,v);
+       v.setVisible(true);
     }
 }
